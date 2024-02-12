@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Decodificador</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <input type="text" id="fname" name="fname" value="Digite seu texto" class="container__input"><br>
+                <p class="container__texto">Apenas letras minúsculas e sem acento.</p>
+                <button onclick="criptografar()" class="container__criptogrfar">Criptografar</button>
+                <button onclick="descriptografar()" class="container__descriptografar">Descriptografar</button>
+            </div>
+            <div class="expositor">
+                <h1 class="expositor__vazio">Nenhuma mensagem encontrada</h1>
+                <p class="expositor__aviso">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                <button onclick="copiaTexto()" class="expositor__copia__texto">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Tiago Bahiense de Santana 12/02/2024</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

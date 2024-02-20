@@ -7,27 +7,34 @@
     <title>Decodificador</title>
 </head>
 <body>
-    <header>
-
+    <header class="cabecalho">
+        <h1 class="cabecalho__texto">Decodificador</h1>
     </header>
-    <main>
-        <section>
-            <div id="digita-texto" class="container">
-                <input type="text" id="texto" name="fname" value="Digite seu texto" class="container__input"><br>
-                <p class="container__texto">Apenas letras minúsculas e sem acento.</p>
-                <button onclick="criptografar()" class="container__criptogrfar">Criptografar</button>
-                <button onclick="descriptografar()" class="container__descriptografar">Descriptografar</button>
+    <main class="entrada">
+        <section class="entrada__conteudo">
+            <div class="entrada__texto">
+                <input type="text" class="entrada__texto__principal" id="texto" name="fname" value="Digite seu texto"><br>
             </div>
-            <div id="mostra-texto" class="expositor">
-                <img id="imagem-lupa" class="expositor__imagem" src="img/lupa.jpg" alt="Imagem inicial">
-                <h1 class="expositor__vazio">Nenhuma mensagem encontrada</h1>
-                <p class="expositor__aviso">Digite um texto que você deseja criptografar ou descriptografar.</p>
-                <button onclick="copiaTexto()" class="expositor__copia__texto">Copiar</button>
+            <div class="alerta">
+                <p class="alerta__texto">Apenas letras minúsculas e sem acento.</p>
+            </div>
+            <div class="botao">
+                <button class="botao__criptografar" onclick="criptografar()">Criptografar</button>
+                <button class="botao__descriptografar" onclick="descriptografar()">Descriptografar</button>
+            </div>
+        </section>
+        <section class="saida">
+            <div class="saida__imagem" src="img/lupa.jpg" alt="imagem de um homem segurando uma lupa.">
+            <p class="saida__texto">Nenhuma mensagem encontrada! <br><br>Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+            <div class="saida__conteudo">
+                <input type="text" class="saida__conteudo__tela" id="textoSaida" readonly><br><br>
+                <button class="saida__conteudo__copiar" onclick="copiarTexto()" id="copia">Copiar</button>
             </div>
         </section>
     </main>
-    <footer>
-        <p>Tiago Bahiense 12/02/2024</p>
+    <footer class="rodape">
+        <p class="rodape__texto">Tiago Bahiense 12/02/2024</p>
     </footer>
     <script src="app.js"></script>
 </body>

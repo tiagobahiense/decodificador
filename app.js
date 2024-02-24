@@ -1,32 +1,44 @@
-function criptografar(){
-    var textoRecebido = document.getElementById("texto").value;
-    var textoCriptografado = criptografarTexto(textoRecebido);
-    document.getElementById("imagem-lupa").innerText = textoCriptografado;
-}
+let opcao = "";
 
-function criptografarTexto (texto){
-    var textoCriptografado = "";
-    for (var i = 0; i < texto.length; i ++) {
-        var caracter = texto.charAt(i).toLowerCase();
-        switch (caracter) {
-            case 'e':
-                textoCriptografado += "enter";
-                break;
-            case 'i':
-                 textoCriptografado += "imes";
-                break;
-            case 'a':
-                textoCriptografado += "ai";
-                break;
-            case 'o':
-                textoCriptografado += "ober";
-                break;
-            case 'u':
-                textoCriptografado += "ufat";
-                break;
-            default:
-                textoCriptografado += caracter;
-        }
+  function criptografar(texto) {
+    texto = texto.replace(/e/g, "enter");
+    texto = texto.replace(/i/g, "imes");
+    texto = texto.replace(/a/g, "ai");
+    texto = texto.replace(/o/g, "ober");
+    texto = texto.replace(/u/g, "ufat");
+    return texto;
+  }
+
+  function descriptografar(texto) {
+    texto = texto.replace(/enter/g, "e");
+    texto = texto.replace(/imes/g, "i");
+    texto = texto.replace(/ai/g, "a");
+    texto = texto.replace(/ober/g, "o");
+    texto = texto.replace(/ufat/g, "u");
+    return texto;
+  }
+
+  function escolherOpcao(valor) {
+    opcao = valor;
+    processar();
+  }
+
+  function processar() {
+    const texto = document.getElementById("textoEntrada").value.toLowerCase();
+    let resultado = "";
+
+    if (opcao === "criptografar") {
+        resultado = criptografar(texto);
+    } else if (opcao === "descriptografar") {
+        resultado = descriptografar(texto);
     }
-    return textoCriptografado;
-}
+    document.getElementById("resultado").value = resultado;
+    document.querySelector(".saida__dados").style.display = "none";
+    document.querySelector(".saida__conteudo").style.display = "flex";  
+  }
+
+  function copiarTexto() {
+    let textoCopiado = document.getElementById("resultado").value;
+    navigator.clipboard.writeText (textoCopiado);
+    alert("O texto que você copiou é: " + textoCopiado);
+  }

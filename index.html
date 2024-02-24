@@ -13,14 +13,14 @@
     <main class="entrada">
         <section class="entrada__conteudo">
             <div class="entrada__texto">
-                <input type="text" class="entrada__texto__principal" id="texto" name="fname" value="Digite seu texto"><br>
+                <textarea class="entrada__texto__principal" id="textoEntrada" placeholder="Digite seu texto"></textarea>
             </div>
             <div class="alerta">
                 <p class="alerta__texto">Apenas letras minúsculas e sem acento.</p>
             </div>
             <div class="botao">
-                <button class="botao__criptografar" onclick="criptografar()">Criptografar</button>
-                <button class="botao__descriptografar" onclick="descriptografar()">Descriptografar</button>
+                <button class="botao__criptografar" onclick="escolherOpcao('criptografar')">Criptografar</button>
+                <button class="botao__descriptografar" onclick="escolherOpcao('descriptografar')">Descriptografar</button>
             </div>
         </section>
         <section class="saida">
@@ -29,7 +29,7 @@
                 <p class="saida__dados__texto">Nenhuma mensagem encontrada! <br><br>Digite um texto que você deseja criptografar ou descriptografar.</p>
             </div>
             <div class="saida__conteudo">
-                <input type="text" class="saida__conteudo__tela" id="textoSaida" readonly><br><br>
+                <textarea class="saida__conteudo__tela" id="resultado" readonly></textarea>
                 <button class="saida__conteudo__copiar" onclick="copiarTexto()" id="copia">Copiar</button>
             </div>
         </section>

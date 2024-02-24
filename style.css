@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
 :root {
-    --cor-primaria: #FFD0EC;
-    --cor-secundaria: #81689D;
-    --cor-terciaria: #474F7A;
-    --cor-hover: #1F2544;
+    --cor-primaria: #96E9C6;
+    --cor-secundaria: #83C0C1;
+    --cor-terciaria: #6962AD;
+    --cor-hover: #6C22A6;
 
     --fonte-primaria: 'Krona One', sans-serif;
     --fonte-secundaria: 'Montserrat', sans-serif;
@@ -56,9 +56,16 @@ body {
     width: 770px;
 }
 
+.entrada__conteudo__titulo {
+    padding: 40px 0 40px 0;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
 .entrada__texto__principal {
     background: none;
-    color: var(--cor-primaria);
+    color: var(--cor-terciaria);
     border: 4px solid var(--cor-primaria);
     width: 680px;
     height: 430px;
@@ -79,7 +86,7 @@ body {
 }
 
 .alerta__texto{
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
     font-family: var(--fonte-secundaria);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     padding-left: 5px;
@@ -152,7 +159,7 @@ body {
 
 .saida__dados__texto{
     font-family: var(--fonte-secundaria);
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
     font-size: 1.0rem;
     text-align: center;   
 }
@@ -162,9 +169,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:  var(--cor-secundaria); 
+    background-color:  white; 
     width: 300px;
-    height: 700px;
+    height: 500px;
     border-radius: 30px;
     padding: 30px 30px 30px 30px;
 }
@@ -190,8 +197,8 @@ body {
     font-size: 18px;
     font-weight: 600;
     padding: 24px;
-    background-color: var(--cor-secundaria);
-    color: var(--cor-terciaria);
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
     font-family: var(--fonte-secundaria);
     text-align: center;
     transition: 400ms;
@@ -199,7 +206,9 @@ body {
 
 
 .rodape {
-    display: flex;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
     background-color: var(--cor-terciaria);
     padding: 10px;
     justify-content: center;
@@ -207,16 +216,15 @@ body {
     gap: 10px;
 }
 
-
 .rodape__texto {
     font-family: var(--fonte-secundaria);
     font-size: 12px;
     font-weight: 900;
     color:  var(--cor-primaria);
+    align-items: center;
+    justify-content: center;
 
 }
-
-/* adaptação para mobile */
 
 @media (max-width: 1200px) {
 
@@ -287,7 +295,7 @@ body {
         margin-right: auto;
     } 
 
-    .dentrada__texto__principal{
+    .entrada__texto__principal{
         padding: 5px;
         width: 100%;
         height: 300px;

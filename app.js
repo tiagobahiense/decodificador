@@ -39,7 +39,7 @@ let opcao = "";
 
   function copiarTexto() {
     if (/Mobi|Android/i.test(navigator.userAgent)) {
-      const mensagem = "Para copiar o texto, pressione e segure o texto acima e selecione a opção 'Copiar'.";
+      const mensagem = "Para copiar o texto, pressione e segure o texto acima, selecione todo o texto e clique na opção 'Copiar'.";
       alert(mensagem);
     } else {
       let textoCopiado = document.getElementById("resultado").value;

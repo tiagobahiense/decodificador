@@ -38,7 +38,12 @@ let opcao = "";
   }
 
   function copiarTexto() {
-    let textoCopiado = document.getElementById("resultado").value;
-    navigator.clipboard.writeText (textoCopiado);
-    alert("O texto que você copiou é: " + textoCopiado);
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+      const mensagem = "Para copiar o texto, pressione e segure o texto acima e selecione a opção 'Copiar'.";
+      alert(mensagem);
+    } else {
+      let textoCopiado = document.getElementById("resultado").value;
+      navigator.clipboard.writeText (textoCopiado);
+      alert("O texto que você copiou é: " + textoCopiado);
+    }  
   }
